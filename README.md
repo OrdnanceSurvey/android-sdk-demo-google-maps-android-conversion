@@ -68,41 +68,42 @@ The initial project was a basic demo using Apple Mapkit and Storyboards. To conv
 1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView
 2. Rename symbols, add the lines below in an appropriate file, the demo app does this in `MapViewController.h`
 
-```objective-c
-#import "OSMap/OSMap.h"
+```java
+package com.example.hellomap;
 
-#define MKAnnotation OSAnnotation
-#define MKPointAnnotation OSPointAnnotation
-#define MKUserLocation OSUserLocation
-#define MKMapViewDelegate OSMapViewDelegate
-#define MKMapView OSMapView
-#define MKAnnotationView OSAnnotationView
-#define MKPinAnnotationView OSPinAnnotationView
-#define MKOverlay OSOverlay
-#define MKOverlayView OSOverlayView
-#define MKCircle OSCircle
-#define MKCircleView OSCircleView
-#define MKPolygon OSPolygon
-#define MKPolygonView OSPolygonView
-#define MKPolyline OSPolyline
-#define MKPolylineView OSPolylineView
-#define MKOverlayPathView OSOverlayPathView
-#define MKPinAnnotationColor OSPinAnnotationColor
-#define MKPinAnnotationColorRed OSPinAnnotationColorRed
-#define MKPinAnnotationColorPurple OSPinAnnotationColorPurple
-#define MKAnnotationViewDragState OSAnnotationViewDragState
-#define MKCoordinateRegion OSCoordinateRegion
-#define MKCoordinateSpan OSCoordinateSpan
-#define MKUserTrackingMode OSUserTrackingMode
-#define MKUserTrackingModeNone OSUserTrackingModeNone
-#define MKUserTrackingModeFollow OSUserTrackingModeFollow
-#define MKUserTrackingModeFollowWithHeading OSUserTrackingModeFollowWithHeading
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
 
-#import "OSMap/OSMap+MapPointCompat.h"
+public class MainActivity extends FragmentActivity {
+    private GoogleMap mMap;
 
-#define MKMapRect OSMapRect
-#define MKMapPoint OSMapPoint
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        setUpMapIfNeeded();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUpMapIfNeeded();
+    }
+
+    private void setUpMapIfNeeded() {
+        if (mMap != null) {
+            return;
+        }
+        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        if (mMap == null) {
+            return;
+        }
+        // Initialize map options. For example:
+        // mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
+}
  ```
 
 
