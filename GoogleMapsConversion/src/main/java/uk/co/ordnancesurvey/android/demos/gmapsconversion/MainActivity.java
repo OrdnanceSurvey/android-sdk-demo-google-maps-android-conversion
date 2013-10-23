@@ -36,11 +36,9 @@ public class MainActivity extends FragmentActivity {
         if (mMap != null) {
             return;
         }
-
         mMap = ((SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_fragment))
                 .getMap();
-
         if (mMap == null) {
             return;
         }
