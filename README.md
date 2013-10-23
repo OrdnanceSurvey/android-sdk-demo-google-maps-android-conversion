@@ -15,7 +15,6 @@ See [Conversion steps](#conversion-steps) for details about converting and the t
 Getting started
 ---
 
-
 #### Registration and Access
 
 In order to access and use the Service via the OpenSpace Android-SDK, you must [apply for an API key.](https://github.com/OrdnanceSurvey/openspace-android-sdk#getting-started)
