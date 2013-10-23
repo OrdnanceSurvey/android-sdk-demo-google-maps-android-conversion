@@ -1,5 +1,5 @@
-android-sdk-demo-google-maps-android-conversion
-===============================================
+Converting from Google to OS Maps
+=================================
 
 A demo app using the openspace-android-SDK as a drop in replacement for the Google Maps Android SDK.
 
