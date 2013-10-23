@@ -7,15 +7,12 @@ This project contains an example of how convert an application currently using G
 
 ![ScreenShot](https://github.com/OrdnanceSurvey/android-sdk-demo-google-maps-android-conversion/raw/master/screenshot-os.png "Screenshot of android-conversion OS app")
 
-
 Getting started
 ---
 
 #### Registration and Access ####
-
 In order to access and use the Service via the OpenSpace Android-SDK, you must [apply for an API key.](https://github.com/OrdnanceSurvey/openspace-android-sdk#getting-started)
 You must use the _package_ name as specified in the AndroidManifest.xml file for your project.
-
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,21 +20,16 @@ You must use the _package_ name as specified in the AndroidManifest.xml file for
     android:versionCode="1"
     android:versionName="1.0" >
 ```    
-
 Replace
-
 ```Java
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 ```
-
 with
-
 ```Java
 import uk.co.ordnancesurvey.android.maps.OSMap;
 import uk.co.ordnancesurvey.android.maps.SupportMapFragment;
 ```
-
 It is also necessary to include the following import, which allows you to specify the data source:
 ```Java
 import uk.co.ordnancesurvey.android.maps.OSTileSource;
@@ -60,7 +52,6 @@ gradlew installTest
 
 Questions and Issues
 -------
-
 If you have any questions or issues with the openspace-ios-sdk or this demo app then please email osopenspace@ordnancesurvey.co.uk
 
 
