@@ -45,6 +45,12 @@ import uk.co.ordnancesurvey.android.maps.SupportMapFragment;
 It is also necessary to include the following import, which allows you to specify the data source:
 ```Java
 import uk.co.ordnancesurvey.android.maps.OSTileSource;
+...
+ArrayList<OSTileSource> sources = new ArrayList<OSTileSource>();
+sources.addAll(mMap.localTileSourcesInDirectory(this,
+Environment.getExternalStorageDirectory()));
+sources.add(mMap.webTileSource("E956736CF5B25963E0430C6CA40A215D", FREE_KEY, null));
+mMap.setTileSources(sources);
 ```
 
 #### Clone project
