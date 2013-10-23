@@ -19,7 +19,15 @@ Getting started
 #### Registration and Access
 
 In order to access and use the Service via the OpenSpace Android-SDK, you must [apply for an API key.](https://github.com/OrdnanceSurvey/openspace-android-sdk#getting-started)
+You must use the package name as specified in the AndroidManifest.xml file.
 
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.ordnancesurvey.android.demos.gmapsconversion"
+    android:versionCode="1"
+    android:versionName="1.0" >
+```    
 
 #### Clone project
 
