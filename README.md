@@ -5,10 +5,6 @@ A demo app using the openspace-android-SDK as a drop in replacement for the Goog
 
 This project contains an example of how convert an application currently using Google Maps Android SDK by renaming the imports.
 
-See [Conversion steps](#conversion-steps) for details about converting and the two targets in this project.
-
-
-![ScreenShot](https://github.com/OrdnanceSurvey/android-sdk-demo-google-maps-android-conversion/raw/master/screenshot-mk.png "Screenshot of android-conversion app")
 ![ScreenShot](https://github.com/OrdnanceSurvey/android-sdk-demo-google-maps-android-conversion/raw/master/screenshot-os.png "Screenshot of android-conversion OS app")
 
 
@@ -53,14 +49,14 @@ sources.add(mMap.webTileSource("E956736CF5B25963E0430C6CA40A215D", FREE_KEY, nul
 mMap.setTileSources(sources);
 ```
 
-#### Clone project
+#### Run test project ####
 
-Copy the project to your local machine, eg:
+Copy the project to your local machine and run the project using gradle:
 
 ```bash
 git clone https://github.com/OrdnanceSurvey/android-sdk-demo-mapkit-conversion.git
+gradlew installTest
 ```
-
 
 Questions and Issues
 -------
