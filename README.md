@@ -50,6 +50,8 @@ git clone https://github.com/OrdnanceSurvey/android-sdk-demo-mapkit-conversion.g
 gradlew installTest
 ```
 
+To open in android studio, import the top level build.gradle file.
+
 Questions and Issues
 -------
 If you have any questions or issues with the openspace-ios-sdk or this demo app then please email osopenspace@ordnancesurvey.co.uk
